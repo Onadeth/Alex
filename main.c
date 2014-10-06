@@ -1,48 +1,23 @@
-/* ѕростой калькул€тор с четырм€ действи€ми. */
-
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "stack_type.h"
-
-
-void push(int a, Stack* st){
-
-
-    Node *nw = (Node* )malloc(sizeof(Node));
-    nw->value = a;
-    nw->next = *st;
-    *st = nw;
-
-}
-
-int pop(Stack* st){
-    int ret = 0;
-    Node* temp;
-    temp = **st;
-    ret = temp->value;
-
-
-    return ret;
-
-// Not finished
-
-}
-
-int isempty(Stack* st){
-
-
-
-}
-
+#include "stack_t.h"
 
 int main(){
 
-    Stack top;
-    top = NULL;
+    int a, b, c = 0;
 
+    scanf("%d ",&a);
+    scanf("%d", &b);
+    scanf("%d", &c);
 
+    Node* top = newStack();
 
+    push(a, &top);
+    push(b, &top);
+    push(c, &top);
 
+    printf("%d ", (pop(&top)-pop(&top)));
+    printf("%d ", pop(&top));
     return 0;
 }
