@@ -3,7 +3,8 @@
 
 #define SIZE_OF_STACK 3
 
-#include "stack_type.h"
+#include "stack_2_type.h"
+
 Stack newStack(int size){
     Stack p;
     p.top = 0;
@@ -12,7 +13,7 @@ Stack newStack(int size){
     return p;
 }
 
-void push(int data, Stack* st){
+int push(int data, Stack* st){
 
     if ( isFull(st) ){
         printf("stack is overflow");
@@ -20,6 +21,7 @@ void push(int data, Stack* st){
     else{
         (st->data)[(++st->top)] = data;
     }
+	return 0;
 }
 
 int pop(Stack* st){
