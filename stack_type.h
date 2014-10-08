@@ -3,9 +3,11 @@
 
 typedef struct {
         int* data;
-        int sizeSt;
+        int szStack;
         int top;
     } Stack ;
+
+Stack newStack();
 
 int push(int data, Stack* st);
 
