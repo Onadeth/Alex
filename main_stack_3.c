@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+
+#include "stack_3_type.h"
+
+int main(){
+
+    Stack st = {};
+    init_stack(&st);
+    printf("%d top \n",st.top);
+    push(&st, 30);
+    printf("%d top \n", st.top);
+    push(&st, 40);
+    printf("%d top \n",st.top);
+    printf("%d ",pop(&st));
+    printf("%d top \n ", st.top);
+    printf("%d ",pop(&st));
+    printf("%d top \n",st.top);
+
+
+    return 0;
+}
