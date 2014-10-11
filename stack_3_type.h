@@ -2,7 +2,7 @@
 #define STACK_3_TYPE_H_INCLUDED
 
 typedef struct{
-        int* dataSt;
+        int* data;
         int szStack;
         int top;
     } Stack;
@@ -13,8 +13,8 @@ int push(Stack *st, int value);
 
 int pop(Stack* st);
 
-int isFull(Stack st);
+int stack_ok(const Stack* st);
 
-int isEmpty(Stack st);
+void stack_distr(Stack* st);
 
 #endif // STACK_3_TYPE_H_INCLUDED
