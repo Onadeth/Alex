@@ -15,12 +15,10 @@ Stack newStack(int size){
 
 int push(int data, Stack* st){
 
-    if ( isFull(st) ){
-        printf("stack is overflow");
-    }
-    else{
+
+
         (st->data)[(++st->top)] = data;
-    }
+
 	return 0;
 }
 
